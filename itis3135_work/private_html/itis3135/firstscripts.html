@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="center">
+    <meta charset = "UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Pell || ITIS 3135 First Scripts</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body class ="center">
+    <header>
+        <h1>Nathan Pell</h1>
+        <nav>
+            <a href="./">Homepage</a>
+            ||
+            <a href="https://webpages.charlotte.edu/jpell1/itis3135/introduction.html">Introduction</a>
+            ||
+            <a href="https://webpages.charlotte.edu/jpell1/itis3135/contract.html">Contract</a>
+            ||
+            <a href="https://webpages.charlotte.edu/jpell1/itis3135/website_evaluations.html">Website Evaluations</a>
+            ||
+            <a href="/">back to main site</a>
+        </nav> 
+        <nav>
+            <a href="https://webpages.charlotte.edu/jpell1/itis3135/pellventuresincorporated.com/">Pell Ventures Inc</a>
+            ||
+            <a href="https://webpages.charlotte.edu/jpell1/itis3135/stuff/*The%20FunnY.htm">CRAPPY WEBpg</a>
+        </nav>   
+    </header>
+	<main>
+        <script src="scripts/defaultscripts.js"></script> 
+        <h3>Date and time:</h3>
+        <p id="datetime"></p>
+
+        <form class="moodForm" id="moodForm" action="#">
+            <label for="name">What is your name: </label>
+            <input type="text" name="name" id="name" required placeholder="Enter your name">
+            <br>
+            <label for="mood">How are you feeling: </label>
+            <input type="text" name="mood" id="mood" required placeholder="Enter your mood">
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="greetingMessage" style="display: none;">
+            <p>Pell Ventures Inc. appreciates your time, <span id="userName"></span>!</p>
+            <p>We're glad you are doing <span id="userMood"></span>.</p>
+        </div>
+
+        <form class="shapeNum" id="shapeNum" action="#">
+            <label for="num">Enter a number 0 - 10: </label>
+            <input type="text" name="num" id="num" required placeholder="Enter number">
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="shapeMessage" style="display: none;">
+            <p>Your shape is a  
+                <span id="userNum"></span>
+            </p>
+        </div>
+
+        <form class="discount" action="#" id="discount">
+            <label for="employees">How many Employees do you have: </label>
+            <input type="text" name="employees" id="employees" required placeholder="Number of employees">
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="discountMessage" style="display: none;">
+            <p>Your discount is <span id="price"></span>%</p>
+            <p>Max discount is 6.5%</p>
+        </div>
+
+        <form class="extraPercent" id="extraPercent" action="#">
+            <label for="num">guess any number 1-10: </label>
+            <input type="text" name="num" id="num" required placeholder="Enter number">
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="extraMessage" style="display: none;">
+            <p>congrats! Your special extra discount is: 
+                <span id="userNum">%</span>
+            </p>
+        </div>
+
+        <form class="emailForm" id="emailForm" action="#">
+            <label for="email">What is your email: </label>
+            <input type="email" name="email" id="email" required placeholder="Enter your email">
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+            <br>
+        </form>
+        <div id="contactMessage" style="display: none;">
+            <p>we will contact you at <span id="contactEmail"></span></p>
+        </div>
+
+        <form id="motivation"action="#">
+            <button type="submit">* CLICK FOR MOTIVATION *</button>
+        </form>
+        <div id="motivationImage" class="motivationImage" style="display: none;">
+            <img class="img" src="images/motivation.jpg" alt="hang In there">
+        </div>
+
+	</main>
+    <script src="scripts/scripts.js"></script> 
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/jpell1/">CLT site</a>
+            ||
+            <a href="https://github.com/NathanPell77">Github</a>
+            ||
+            <a href="https://nathanpell77.github.io/">Github.io</a>
+            ||
+            <a href="https://webpages.charlotte.edu/jpell1/itis3135/">ITIS3135.io</a>
+            ||
+            <a href="https://www.freecodecamp.org/NathanPell77">Freecodecamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/NathanPell77">Codeacadamy</a>
+            ||
+            <a href="https://www.linkedin.com/in/nathanpell/">Linkedin</a>
+        </nav>
+        <p>Page built by <a href="https://webpages.charlotte.edu/jpell1/itis3135/pellventuresincorporated.com/">
+            Pell Ventures incorporated&copy;</a> 2023</p>
+        <a href="https://validator.w3.org/check?uri=referer">
+            <img style="border:0;width:88px;height:31px"
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" 
+            alt="Valid HTML!">
+            </a>
+
+            ||
+
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss" 
+            alt="Valid CSS!">
+        </a>
+    </footer>
+</body>
+</html>
