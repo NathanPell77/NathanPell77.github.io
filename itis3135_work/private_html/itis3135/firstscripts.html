@@ -8,7 +8,7 @@
 </head>
 <body class ="center">
     <header>
-        <h1>Nathan Pell</h1>
+        <h1>Nathan Pell || ITIS 3135</h1>
         <nav>
             <a href="./">Homepage</a>
             ||
@@ -27,9 +27,17 @@
         </nav>   
     </header>
 	<main>
-        <script src="scripts/defaultscripts.js"></script> 
-        <h3>Date and time:</h3>
-        <p id="datetime"></p>
+        <h2>First JavaScripts</h2>
+        <h3>Current date and time: <span id="datetime"></span></h3>
+
+        <script>
+        function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString();
+            document.querySelector('#datetime').textContent = currentDateTime;
+        }
+        setInterval(updateDateTime, 1000);
+        </script>  
 
         <form class="moodForm" id="moodForm" action="#">
             <label for="name">What is your name: </label>
@@ -39,72 +47,38 @@
             <input type="text" name="mood" id="mood" required placeholder="Enter your mood">
             <br>
             <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
+            <button type="submit">Recieve Message</button>
+            <div id="greetingMessage" style="display: none;">
+                <p>Pell Ventures Inc. appreciates your time <span id="userName"></span>!</p>
+                <p>We're glad you are doing <span id="userMood"></span>.</p>
+            </div>
         </form>
-        <div id="greetingMessage" style="display: none;">
-            <p>Pell Ventures Inc. appreciates your time, <span id="userName"></span>!</p>
-            <p>We're glad you are doing <span id="userMood"></span>.</p>
-        </div>
 
         <form class="shapeNum" id="shapeNum" action="#">
             <label for="num">Enter a number 0 - 10: </label>
             <input type="text" name="num" id="num" required placeholder="Enter number">
             <br>
             <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
+            <button type="submit">Calculate shape</button>
+            <div id="shapeMessage" style="display: none;">
+                <p>Your shape is a  
+                    <span id="userNum"></span>
+                </p>
+            </div>
         </form>
-        <div id="shapeMessage" style="display: none;">
-            <p>Your shape is a  
-                <span id="userNum"></span>
-            </p>
-        </div>
 
-        <form class="discount" action="#" id="discount">
-            <label for="employees">How many Employees do you have: </label>
-            <input type="text" name="employees" id="employees" required placeholder="Number of employees">
+        <form class="discount" id="discount" action="#">
+            <label for="employees">How many Penguins would you own if you could? </label>
+            <input type="text" name="employees" id="employees" required placeholder="50">
             <br>
             <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </form>
-        <div id="discountMessage" style="display: none;">
-            <p>Your discount is <span id="price"></span>%</p>
-            <p>Max discount is 6.5%</p>
-        </div>
-
-        <form class="extraPercent" id="extraPercent" action="#">
-            <label for="num">guess any number 1-10: </label>
-            <input type="text" name="num" id="num" required placeholder="Enter number">
-            <br>
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </form>
-        <div id="extraMessage" style="display: none;">
-            <p>congrats! Your special extra discount is: 
-                <span id="userNum">%</span>
-            </p>
-        </div>
-
-        <form class="emailForm" id="emailForm" action="#">
-            <label for="email">What is your email: </label>
-            <input type="email" name="email" id="email" required placeholder="Enter your email">
-            <br>
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-            <br>
-        </form>
-        <div id="contactMessage" style="display: none;">
-            <p>we will contact you at <span id="contactEmail"></span></p>
-        </div>
-
-        <form id="motivation"action="#">
-            <button type="submit">* CLICK FOR MOTIVATION *</button>
-        </form>
-        <div id="motivationImage" class="motivationImage" style="display: none;">
-            <img class="img" src="images/motivation.jpg" alt="hang In there">
-        </div>
-
+            <button type="submit">Calculate penguin discount</button>
+            <div id="discountMessage" style="display: none;">
+                <p>Your discount is <span id="price"></span>%</p>
+                <p>Max discount is 6.5%</p>
+            </div>
 	</main>
-    <script src="scripts/scripts.js"></script> 
+    <script src="scripts/scripts.js"></script>
     <footer>
         <nav>
             <a href="https://webpages.charlotte.edu/jpell1/">CLT site</a>
