@@ -16,17 +16,23 @@
         </nav>
         <p>Page built by <a href="https://webpages.charlotte.edu/jpell1/itis3135/pellventuresincorporated.com/">
             Pell Ventures incorporated&copy;</a> 2023</p>
-        <a href="https://validator.w3.org/check?uri=referer">
+        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
             <img style="border:0;width:88px;height:31px"
             src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" 
             alt="Valid HTML!">
+            <script>
+            document.getElementbyID("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri="+location.href);
+            </script>
             </a>
 
             ||
 
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
             <img style="border:0;width:88px;height:31px"
             src="https://jigsaw.w3.org/css-validator/images/vcss" 
             alt="Valid CSS!">
+            <script>
+                document.getElementbyID("validation_link_css").setAttribute("href","https://validator.w3.org/css-validator?uri="+location.href);
+            </script>
         </a>
     </footer>
