@@ -95,15 +95,17 @@ function loadImage() {
     const form = document.getElementById("BYO-form");
     form.reset();
     document.getElementById('loadImage').innerHTML = '';
-}
+
+ }
   
     document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("BYO-form");
     form.addEventListener("submit", validateForm);
   
     form.addEventListener("submit", function (event) {
-      const newPage = document.createElement("div");
-      newPage.innerHTML = `
+
+        const newPage = document.createElement("div");
+        newPage.innerHTML = `
         <h2>Submitted Information</h2>
         <p>Name: ${form.name.value}</p>
         <p>Mascot: ${form.Mascot.value}</p>
@@ -115,19 +117,20 @@ function loadImage() {
         <p>Primary Computer Platform: ${form.machine-background.value}</p>
         <p>Courses currently taking:</p>
         <ul>
-          <li>${form["course1"].value}</li>
-          <li>${form["course2"].value}</li>
-          <li>${form["course3"].value}</li>
-          <li>${form["course4"].value}</li>
-          <li>${form["course5"].value}</li>
+        <li>${form["course1"].value}</li>
+        <li>${form["course2"].value}</li>
+        <li>${form["course3"].value}</li>
+        <li>${form["course4"].value}</li>
+        <li>${form["course5"].value}</li>
         </ul>
         <p>Funny/Interesting Item about Yourself: ${form["funny"].value}</p>
         <p>Anything else: ${form["extra"].value}</p>
-  
+
         <button onclick="location.href='your_previous_page.html'">Back</button>
-      `;
-      const pageWrapper = document.getElementById("BYO_intro");
-      pageWrapper.innerHTML = "";
-      pageWrapper.appendChild(newPage);
+        `;
+        const pageWrapper = document.getElementById("BYO_intro");
+        pageWrapper.innerHTML = "";
+        pageWrapper.appendChild(newPage);
     });
+
 });
