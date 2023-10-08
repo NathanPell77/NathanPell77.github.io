@@ -91,14 +91,14 @@ function loadImage() {
     }
 }
 
-  function resetForm() {
+function resetForm() {
     const form = document.getElementById("BYO-form");
     form.reset();
     document.getElementById('loadImage').innerHTML = '';
 
- }
+}
   
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("BYO-form");
     form.addEventListener("submit", validateForm);
   
