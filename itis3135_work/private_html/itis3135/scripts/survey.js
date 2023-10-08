@@ -67,24 +67,24 @@ function loadImage() {
     function validateForm(event) {
     const nameInput = document.getElementById("name");
     const mascotInput = document.getElementById("mascot");
-    const introImageInput = document.getElementById("myImg");
-    const imageCaptionInput = document.getElementById("img-caption");
-    const perbackgroundInput = document.getElementById("personal-background");
-    const perobackgroundInput = document.getElementById("professional-background");
-    const AcadmbackgroundInput = document.getElementById("academic-background");
-    const webdivbackgroundInput = document.getElementById("web-dev-background");
-    const PrimaryCompPlatformInput = document.getElementById("machine-background");
+    const myImgInput = document.getElementById("myImg");
+    const imgCaptionInput = document.getElementById("img-caption");
+    const personalBackgroundInput = document.getElementById("personal-background");
+    const professionalBackgroundInput = document.getElementById("professional-background");
+    const academicBackgroundInput = document.getElementById("academic-background");
+    const webDevBackgroundInput = document.getElementById("web-dev-background");
+    const machineBackgroundInput = document.getElementById("machine-background");
   
     if (
         nameInput.value === "" ||
         mascotInput.value === "" ||
-        (introImageInput.value === "" && !introImageInput.files.length) ||
-        imageCaptionInput.value === "" ||
-        perbackgroundInput.value === "" ||
-        perobackgroundInput.value === "" ||
-        AcadmbackgroundInput.value === "" ||
-        webdivbackgroundInput.value === "" ||
-        PrimaryCompPlatformInput.value === ""
+        (myImgInput.value === "" && !myImgInput.files.length) ||
+        imgCaptionInput.value === "" ||
+        personalBackgroundInput.value === "" ||
+        professionalBackgroundInput.value === "" ||
+        academicBackgroundInput.value === "" ||
+        webDevBackgroundInput.value === "" ||
+        machineBackgroundInput.value === ""
     ) {
         alert("Please fill out all required fields before submitting the form.");
         event.preventDefault();
@@ -107,12 +107,12 @@ function loadImage() {
         <h2>Submitted Information</h2>
         <p>Name: ${form.name.value}</p>
         <p>Mascot: ${form.Mascot.value}</p>
-        <p>Image Caption: ${form["image-caption"].value}</p>
-        <p>Personal Background: ${form.perbackground.value}</p>
-        <p>Professional Background: ${form.perobackground.value}</p>
-        <p>Academic Background: ${form.Acadmbackground.value}</p>
-        <p>Background in Web Development: ${form.webdivbackground.value}</p>
-        <p>Primary Computer Platform: ${form.PrimaryCompPlatform.value}</p>
+        <p>Image Caption: ${form["img-caption"].value}</p>
+        <p>Personal Background: ${form.personal-background.value}</p>
+        <p>Professional Background: ${form.professional-background.value}</p>
+        <p>Academic Background: ${form.academic-background.value}</p>
+        <p>Background in Web Development: ${form.web-dev-background.value}</p>
+        <p>Primary Computer Platform: ${form.machine-background.value}</p>
         <p>Courses currently taking:</p>
         <ul>
           <li>${form["course1"].value}</li>
@@ -121,8 +121,8 @@ function loadImage() {
           <li>${form["course4"].value}</li>
           <li>${form["course5"].value}</li>
         </ul>
-        <p>Funny/Interesting Item about Yourself: ${form["Funny-thing"].value}</p>
-        <p>Anything else: ${form["Anything-else"].value}</p>
+        <p>Funny/Interesting Item about Yourself: ${form["funny"].value}</p>
+        <p>Anything else: ${form["extra"].value}</p>
   
         <button onclick="location.href='your_previous_page.html'">Back</button>
       `;
