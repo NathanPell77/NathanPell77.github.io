@@ -64,7 +64,7 @@ function loadImage() {
     addCourseButton.addEventListener("click", addCourse);
 });
 
-    function validateForm(event) {
+function validateForm(event) {
     const nameInput = document.getElementById("name");
     const mascotInput = document.getElementById("mascot");
     const myImgInput = document.getElementById("myImg");
@@ -74,18 +74,17 @@ function loadImage() {
     const academicBackgroundInput = document.getElementById("academic-background");
     const webDevBackgroundInput = document.getElementById("web-dev-background");
     const machineBackgroundInput = document.getElementById("machine-background");
-  
-    if (
-        nameInput.value === "" ||
-        mascotInput.value === "" ||
-        (myImgInput.value === "" && !myImgInput.files.length) ||
-        imgCaptionInput.value === "" ||
-        personalBackgroundInput.value === "" ||
-        professionalBackgroundInput.value === "" ||
-        academicBackgroundInput.value === "" ||
-        webDevBackgroundInput.value === "" ||
-        machineBackgroundInput.value === ""
-    ) {
+
+    if(
+    nameInput.value === "" || 
+    mascotInput.value === "" || 
+    (myImgInput.value === "" && !myImgInput.files.length) || 
+    imgCaptionInput.value === "" || 
+    personalBackgroundInput.value === "" || 
+    professionalBackgroundInput.value === "" || 
+    academicBackgroundInput.value === "" || 
+    webDevBackgroundInput.value === "" || 
+    machineBackgroundInput.value === "") {
         alert("Please fill out all required fields before submitting the form.");
         event.preventDefault();
     }

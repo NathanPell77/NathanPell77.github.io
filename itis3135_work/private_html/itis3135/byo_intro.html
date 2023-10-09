@@ -12,19 +12,23 @@
         <main>
         <h2>Activity #6 - BYO intro</h2>
         <h3>Time to BYO Intro page, fill out the form below so you can generate your own page.</h3>
-        <form id="BYO-form">
+
+        <form id="BYO-form" onsubmit="validateForm(submit)" action="#">
+
             <div class="input-element">
-            <label id="name-label">
-                Name
-            </label>
-            <input placeholder="Nathan Pell" id="name" type="text" required />
+                <label id="name-label">
+                    Name
+                </label>
+                <input placeholder="Nathan Pell" id="name" type="text" required />
             </div>
+
             <div class="input-element">
-            <label id="mascot">
-                Mascot
-            </label>
-            <input placeholder="Noble Penguin" type="text" id="mascot" name="mascot" required />
+                <label id="mascot">
+                    Mascot
+                </label>
+                <input placeholder="Noble Penguin" type="text" id="mascot" name="mascot" required />
             </div>
+
             <div class="input-element">
                 <label id="img">
                     Image
@@ -33,42 +37,49 @@
                 <input type="submit" onclick="loadImage()">
                 <div id="loadImage"></div>
             </div>
+
             <div class="input-element">
                 <label id="img-capt">
                 Image Caption
                 </label>
                 <input placeholder="Me and my friends at..." id="img-caption" type="text" required />
             </div>
+
             <div class="input-element">
                 <label id="personal">
                     Personal Background
                 </label>
                 <input placeholder="I was born in..." id="personal-background" type="text" required />
             </div>
+
             <div class="input-element">
                 <label id="professional">
                     Professional Background
                 </label>
                 <input placeholder="I have worked at... doing things like..." id="professional-background" type="text" required />
             </div>
+
             <div class="input-element">
                 <label id="academic">
                     Academic Background
                 </label>
                 <input placeholder="I am currently studying..." id="academic-background" type="text" required />
             </div>
+
             <div class="input-element">
                 <label id="web-dev">
                     Background in Web Development
                 </label>
                 <input placeholder="My experience in web dev includes..." id="web-dev-background" type="text" required />
             </div>
+
             <div class="input-element">
                 <label id="machine">
                     Primary Computer Platform
                 </label>
                 <input placeholder="I am currently using a macbook for school" id="machine-background" type="text" required />
             </div>
+            
             <div class="input-element">
                 <label id="courses">
                     Currently Enrolled Courses
@@ -79,37 +90,44 @@
                 </div>
                 <button id="add-course" class="submit-button" type="button">Add Course</button>
             </div>
+
             <div class="input-element">
                 <label id="funny">
                     Funny thing?
                 </label>
                 <input placeholder="a funny thing about me is..." id="funny-thing" type="text" />
             </div>
+
             <div class="input-element">
                 <label id="extra">
                     Anything else?
                 </label>
                 <input placeholder="I would like to mention..." id="extra-stuff" type="text" />
             </div>
+
             <div class="input-element">
                 <label>I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.</label>
                 <br>
                 <label for="interest1">
-                    <input type="checkbox" id="interest1" name="interests[]" value="Product" /> Click Here
+                    <input type="checkbox" id="interest1" name="interests[]" value="Product" required /> Click Here
                 </label>
                 <br>
             </div>
-            <button type="submit" id="submit" onclick="validateForm(form)" onclick="">
+
+            <button type="submit" id="submit">
             Submit Form
             </button>
             <button type="reset" id="reset">
             Reset Form
             </button>
         </form>
+
         </main>
+
         <div data-include="components/footer.html"></div>
         <script src="scripts/include.js" type="text/JavaScript"></script>
         <script src="scripts/survey.js" type="text/JavaScript"></script>
     </section>
+
   </body>
 </html>
