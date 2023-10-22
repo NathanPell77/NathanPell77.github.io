@@ -130,23 +130,45 @@ form{
 	padding: 25px;
 	border: 1px solid azure;
 	border-radius: 20px;
-  }
-  input{
+}
+input {
 	padding: 10px;
 	border: none;
 	border-radius: 5px;
-  }
-  .input-element{
+}
+.input-element {
 	display: flex;
 	flex-direction: column;
 	margin:10px;
-  }
-  select{
+}
+select {
 	padding:5px;
 	border: none;
 	border-radius:5px;
-  }
-  input[type="checkbox"]{
+}
+input[type="checkbox"] {
 	width: 15px;
-	height: 15px
-  }
+	height: 15px;
+}
+
+/* phones */
+@media (min-width: 576px) {
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	body{
+		margin: 0 auto;
+	}
+}
+
+/* tablets */
+@media (min-width: 768px) {
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	body{
+		margin: 0 auto;
+	}
+}
