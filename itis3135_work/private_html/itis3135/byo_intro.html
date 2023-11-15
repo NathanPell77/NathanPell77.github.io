@@ -7,127 +7,106 @@
     <link rel="stylesheet" href="styles/default.css">
   </head>
   <body class="center">
-    <section id="BYO_intro">
-        <div data-include="components/header.html"></div>
-        <main>
-        <h2>Activity #6 - BYO intro</h2>
-        <h3>Time to BYO Intro page, fill out the form below so you can generate your own page.</h3>
+    <div data-include="components/header.html"></div>
+    <main>
+    <h2>Activity #6 - BYO intro</h2>
+    <h3>Time to BYO Intro page, fill out the form below so you can generate your own page.</h3>
 
-        <form id="BYO-form" onsubmit="validateForm(submit)" action="#">
+    <form id="survey" onsubmit="generateForm()" action="#">
+        <div>
+            <label for="name">Name</label>
+            <input required id="name" type="text" value="Nathan Pell" />
+        </div>
+        <br>
 
-            <div class="input-element">
-                <label id="name-label">
-                    Name
-                </label>
-                <input placeholder="Nathan Pell" id="name" type="text" required />
-            </div>
+        <div>
+            <label for="mascot">Mascot</label>
+            <input required id="mascot" type="text" value="Noble Penguin" />
+        </div>
+        <br>
 
-            <div class="input-element">
-                <label id="mascot">
-                    Mascot
-                </label>
-                <input placeholder="Noble Penguin" type="text" id="mascot" name="mascot" required />
-            </div>
+        <div>
+            <label for="image">Image</label>
+            <input required id="image" type="file" accept="image/png, image/jpeg" />
+        </div>
+        <br>
 
-            <div class="input-element">
-                <label id="img">
-                    Image
-                </label>
-                <input type="file" id="myImg" name="filename" accept="image/png, image/jpeg">
-                <input type="submit" onclick="loadImage()">
-                <div id="loadImage"></div>
-            </div>
+        <div>
+            <label for="caption">Image Caption</label>
+            <input required id="caption" type="text" value="At the... in..."/>
+        </div>
+        <br>
+        
+        <div>
+            <label for="personal_background">Personal Background</label>
+            <input required id="personal_background" type="text" value="I was born in... and have lived in..." />
+        </div>
+        <br>
 
-            <div class="input-element">
-                <label id="img-capt">
-                Image Caption
-                </label>
-                <input placeholder="Me and my friends at..." id="img-caption" type="text" required />
-            </div>
+        <div>
+            <label for="professional_background">Professional Background</label>
+            <input required id="professional_background" type="text" value="I have worked at..." />
+        </div>
+        <br>
 
-            <div class="input-element">
-                <label id="personal">
-                    Personal Background
-                </label>
-                <input placeholder="I was born in..." id="personal-background" type="text" required />
-            </div>
+        <div>
+            <label for="academic_background">Academic Background</label>
+            <input required id="academic_background" type="text" value="I am currently in my Junior year" />
+        </div>
+        <br>
+        
+        <div>
+            <label for="background">Background in Web Development</label>
+            <input required id="background" type="text" value="Building basic webpages with HTML CSS and JavaScript" />
+        </div>
+        <br>
 
-            <div class="input-element">
-                <label id="professional">
-                    Professional Background
-                </label>
-                <input placeholder="I have worked at... doing things like..." id="professional-background" type="text" required />
-            </div>
+        <div>
+            <label for="platform">Primary Computer Platform</label>
+            <input required id="platform" type="text" value="Windows 11 desktop" />
+        </div>
+        <br>
 
-            <div class="input-element">
-                <label id="academic">
-                    Academic Background
-                </label>
-                <input placeholder="I am currently studying..." id="academic-background" type="text" required />
-            </div>
-
-            <div class="input-element">
-                <label id="web-dev">
-                    Background in Web Development
-                </label>
-                <input placeholder="My experience in web dev includes..." id="web-dev-background" type="text" required />
-            </div>
-
-            <div class="input-element">
-                <label id="machine">
-                    Primary Computer Platform
-                </label>
-                <input placeholder="I am currently using a macbook for school" id="machine-background" type="text" required />
-            </div>
-            
-            <div class="input-element">
-                <label id="courses">
-                    Currently Enrolled Courses
-                </label>
-                <div id="courses-container">
-                    <input type="text" name="course" placeholder="Enter a course">
-                <button> Delete </button>
+        <div>
+            <label for="courses">Courses Currently Taking:</label>
+            <div id="course_block">
+                <div>
+                    <input required id="courses" type="text" value="ITIS 3135" />
+                    <button id ="delete">Delete</button>
                 </div>
-                <button id="add-course" class="submit-button" type="button">Add Course</button>
+                
             </div>
+            <button onclick="addCourse();" id="add">Add</button>
+        </div>
+        <br>
+        
+        <div>
+            <label for="funny">Funny thing?</label>
+            <textarea placeholder="Optional" id="funny" type="text" value="Something funny about myself is that..." ></textarea>
+        </div>
+        <br>
+        
+        <div>
+            <label for="other">Anything else?</label>
+            <textarea placeholder="Optional" id="other" type="text" value="I would like to mention..." ></textarea>
+        </div>
+        <br>
 
-            <div class="input-element">
-                <label id="funny">
-                    Funny thing?
-                </label>
-                <input placeholder="a funny thing about me is..." id="funny-thing" type="text" />
-            </div>
+        <div>
+            <br>
+            <p><input required type="checkbox">I understand that what is on this page is not password protected and I
+                will not put anything here that I do not want publicly available.</p>
 
-            <div class="input-element">
-                <label id="extra">
-                    Anything else?
-                </label>
-                <input placeholder="I would like to mention..." id="extra-stuff" type="text" />
-            </div>
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+        </div>
+        <br>
+    </form>
 
-            <div class="input-element">
-                <label>I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.</label>
-                <br>
-                <label for="interest1">
-                    <input type="checkbox" id="interest1" name="interests[]" value="Product" required /> Click Here
-                </label>
-                <br>
-            </div>
+    </main>
 
-            <button type="submit" id="submit">
-            Submit Form
-            </button>
-            <button type="reset" id="reset">
-            Reset Form
-            </button>
-        </form>
-
-        </main>
-
-        <div data-include="components/footer.html"></div>
-        <script src="scripts/include.js" type="text/JavaScript"></script>
-        <script src="scripts/survey.js" type="text/JavaScript"></script>
-    </section>
-
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.js" type="text/JavaScript"></script>
+    <script src="scripts/survey.js" type="text/JavaScript"></script>
   </body>
 </html>
